@@ -1,0 +1,9 @@
+[alias]
+  prcp = "!gh pr list --json title,url -A sterkensmilan | jq -r '.[0] | .title, .url' | pbcopy"
+  prmy = "!gh pr list --json title,url -A sterkensmilan"
+  prmerge = "!gh pr merge $1"
+  prcreate = "!gh pr create"
+  update = "!git checkout master && git fetch upstream -v && git merge upstream/master && git push origin head"
+[user]
+	name = sterkensmilan
+  email = milansterkens@hotmail.com
