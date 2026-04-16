@@ -37,6 +37,10 @@ alias nas='cd //Volumes/home/' # Fixed the double slash
 alias codem='ssh svintcodem01'
 alias gu="cd ~/work/Repos/puppet-monorepo/ && git checkout master && git fetch upstream -v && git merge upstream/master && git push origin head"
 
+# Dotfiles git setup: https://wiki.archlinux.org/title/Dotfiles
+alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+dotfiles config status.showUntrackedFiles no
+
 # 5. Prompt Configuration
 setopt prompt_subst
 autoload -Uz vcs_info
